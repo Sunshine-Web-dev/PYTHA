@@ -1,0 +1,413 @@
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 30px;
+}
+
+h2{
+    font-weight: 300;
+}
+
+#main-wrapper{
+    display: flex;
+}
+
+#layer,#layer:before{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0; 
+    left: 0;
+    z-index: -1;
+}
+
+#layer{
+    background-image: url('../img/server-recks-floor.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#layer:before{
+    content: "";
+    background-color: rgba(0,0,0,0.6);
+}
+
+canvas {
+	position: relative;
+	display: block;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#sliderWrapper{
+    color: #fff;
+    -margin: 0 auto;
+}
+
+#sliderWrapper input{
+    width: 100%;
+}
+
+#sliderWrapper .fontWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+#sliderWrapper .fontWrapper div.selected{
+    font-weight: 600;
+}
+
+#logo{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 170px;
+}
+
+#tooltip-wrapper{
+    padding-left: 100px;
+    padding-top: 200px;
+}
+
+#tooltip{
+    color: #fff;
+    padding: 30px 30px 10px 30px;
+    width: 500px;
+    background: rgba(151, 151, 151, 0.25);
+}
+
+.type{
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    color: rgba(255,255,255,0.5);
+}
+
+.title{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.title.pp{
+    -color: #99c623;
+}
+
+p.description{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+#keep-tooltip-wrapper{
+    color: rgb(216, 216, 216);
+    font-size: 0.9rem;
+    line-height: 1rem;
+    position: absolute;
+    right: 20px;
+    top: 120px;
+}
+
+#products-wrapper{
+    color: #fff;
+    padding-left: 0px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 70px;
+}
+#projects-wrapper{
+    color: #fff;
+    padding-left: 0px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 70px;
+}
+
+#products-list{
+    width: 300px;
+}
+#products-list{
+    width: 300px;
+}
+
+#products-list div.title{
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+#projects-list div.title{
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+
+#products-list div.product{
+    cursor: pointer;
+    margin: 5px 0;
+    -background: rgba(255, 255, 255, 0.2);
+    background: rgba(151, 151, 151, 0.25);
+    padding: 10px 10px;
+    padding-left: 35px;
+    position: relative;
+}
+#projects-list div.project{
+    cursor: pointer;
+    margin: 5px 0;
+    -background: rgba(255, 255, 255, 0.2);
+    background: rgba(151, 151, 151, 0.25);
+    padding: 10px 10px;
+    padding-left: 35px;
+    position: relative;
+}
+#products-list div.product:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    background-image: url("../img/delivery-box.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: 50%;
+}
+#projects-list div.project:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    background-image: url("../img/delivery-box.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: 50%;
+}
+
+
+#products-list div.product:hover{
+    color: #509ddc;
+    background: rgba(0, 0, 0, 0.3);
+}
+#projects-list div.project:hover{
+    color: #509ddc;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#products-description{
+    overflow: auto;
+    height: 750px;
+    margin-left: 100px;
+    width: 500px;
+}
+#projects-description{
+    margin-left: 100px;
+    width: 500px;
+    overflow: auto;
+    height: 750px;
+}
+@media only screen and (max-width: 1366px){
+    body{
+        padding: 20px;
+    }
+    #tooltip-wrapper{
+        padding: 20px;
+    }   
+}
+@media only screen and (max-width: 768px){
+    body{
+        padding: 20px;
+    }
+    #main-wrapper{
+        display: block;
+    }
+    #tooltip-wrapper{
+        padding: 0;
+    }
+    #tooltip{
+        margin-top: 15px !important;
+        width: 92% !important;
+    }
+    #canvas-holder{
+        width: 100% !important;
+        height: 750px !important;
+    }
+    #sliderWrapper{
+        width: 100% !important;
+    }
+    #projects-wrapper{
+        padding-top: 20px;
+        margin-left: 20px;
+    }
+    #products-wrapper{
+        padding-top: 20px;
+        margin-left: 20px;
+    }
+    #products-description {
+        overflow: auto;
+        height: 500 px;
+        margin-left: 10px;
+        width: 400px;
+    }
+    #projects-description {
+        overflow: auto;
+        height: 500 px;
+        margin-left: 10px;
+        width: 400px;
+    }
+}
+@media only screen and (max-width: 540px){
+    #canvas-holder{
+        width: 100% !important;
+        height: 500px !important;
+    }
+    #tooltip{
+        width: 87% !important;
+    }
+    #products-list{
+        width: 150px;
+        font-size: 10px;
+    }
+    #products-description{
+        width: 320px;
+    }
+    #products-list div.title{
+        font-weight: 200;
+        font-size: 0.7rem;
+        margin-top: 10px;
+    }
+    #projects-list div.title{
+        font-weight: 200;
+        font-size: 0.7rem;
+        margin-top: 10px;
+    }
+    .type{
+        font-size: 0.7rem !important;
+        margin-bottom: 0 !important;
+    } 
+    .title{
+        font-size: 1rem;
+        margin-bottom: 5px;
+        font-weight: 300;
+    }
+    p.description{
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+        font-weight: 300;
+        line-height: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 414px){
+    body{
+        padding: 20px;
+    }
+    #logo{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 100px;
+    }
+    #main-wrapper{
+        display: block;
+    }
+    #tooltip-wrapper{
+        padding: 0;
+    }
+   .fontWrapper{
+       font-size: 10px;
+   }
+    #tooltip{
+        margin-top: 5px !important;
+        width: 82% !important;
+    }
+    #canvas-holder{
+        width: 100% !important;
+        height: 360px !important;
+    }
+    #sliderWrapper{
+        width: 100% !important;
+    }
+    .type{
+        font-size: 0.7rem !important;
+        margin-bottom: 0 !important;
+    } 
+    .title{
+        font-size: 1rem;
+        margin-bottom: 5px;
+        font-weight: 300;
+    }
+    p.description{
+        font-size: 0.8rem;
+        margin-bottom: 7px;
+        font-weight: 300;
+        line-height: 1rem;
+    }
+    #products-wrapper {
+        margin-left: 0;
+        padding-top: 10px;
+    }
+    #products-description{
+        margin-left: 5px;
+        overflow: auto;
+        height: 500px;
+        width: 210px;
+    }
+    #products-list{
+        width: 150px;
+        font-size: 10px;
+    }
+    #projects-wrapper{
+        margin-left: 0;
+        padding-top: 10px;
+    }
+    #projects-description{
+        overflow: auto;
+        height: 500px;
+        margin-left: 5px;
+        width: 210px;
+    }
+    #projects-list{
+        width: 150px;
+        font-size: 10px;
+    }
+    #products-list div.title{
+        font-weight: 200;
+        font-size: 0.7rem;
+        margin-top: 10px;
+    }
+    #projects-list div.title{
+        font-weight: 200;
+        font-size: 0.7rem;
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width: 375px){
+    #canvas-holder {
+        width: 100% !important;
+        height: 330px !important;
+    }
+    #products-description {
+        margin-left: 5px;
+        overflow: auto;
+        height: 500px;
+        width:175px;;
+    }
+}
+@media only screen and (max-width: 320px){
+    #canvas-holder {
+        width: 100% !important;
+        height: 280px !important;
+    }
+}
